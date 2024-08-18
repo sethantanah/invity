@@ -22,7 +22,7 @@ function respond(response) {
 
     setTimeout(() => {
         thankYouScreen.style.display = 'none';
-    }, 3000);
+    }, 30000);
 }
 
 acceptBtn.addEventListener('click', () => {
@@ -34,7 +34,7 @@ rejectBtn.addEventListener('click', () => {
 })
 
 
-async function submit(status) {
+async function submit(status_text, status) {
     try {
         const response = await fetch('/api/record/attendance', {
             method: 'POST',
