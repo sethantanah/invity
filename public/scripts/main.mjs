@@ -44,16 +44,14 @@ async function submit(status_text, status) {
             body: JSON.stringify({'name': 'Seth Joe', 'attending': status_text }),
         });
 
-        const res = await response.json();
+        if (status === true) {
+            thankYouMessage.textContent = "We're delighted you'll be joining us for our celebration!";
+        } else {
+            thankYouMessage.textContent = "We're sorry you can't make it, but thank you for letting us know.";
+        }
 
         if(!response.ok){
            alert("Could not submit! Try again.");
-        }else{
-            if (status === true) {
-                thankYouMessage.textContent = "We're delighted you'll be joining us for our celebration!";
-            } else {
-                thankYouMessage.textContent = "We're sorry you can't make it, but thank you for letting us know.";
-            }
         }
        
     } catch (error) {
