@@ -35,6 +35,11 @@ rejectBtn.addEventListener('click', () => {
 
 
 async function submit(status_text, status) {
+    if (status === true) {
+        thankYouMessage.textContent = "We're delighted you'll be joining us for our celebration!";
+    } else {
+        thankYouMessage.textContent = "We're sorry you can't make it, but thank you for letting us know.";
+    }
     try {
         const response = await fetch('api/record/attendance', {
             method: 'POST',
@@ -43,12 +48,6 @@ async function submit(status_text, status) {
             },
             body: JSON.stringify({'name': 'Seth Joe', 'attending': status_text }),
         });
-
-        if (status === true) {
-            thankYouMessage.textContent = "We're delighted you'll be joining us for our celebration!";
-        } else {
-            thankYouMessage.textContent = "We're sorry you can't make it, but thank you for letting us know.";
-        }
 
         if(!response.ok){
            alert("Could not submit! Try again.");
