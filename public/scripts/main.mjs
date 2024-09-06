@@ -1,5 +1,4 @@
 import { friendsList } from "./data.mjs";
-
 const rsvpButton = document.querySelector('#rsv');
 const overlay = document.getElementById('overlay');
 const popover = document.getElementById('rsvpPopover');
@@ -9,6 +8,18 @@ const gallaryContainer = document.getElementById('gallery-container');
 
 const acceptBtn = document.getElementById('accept');
 const rejectBtn = document.getElementById('reject');
+
+function getURLParameter(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+}
+
+// const adminId = getURLParameter('admin');
+// if (adminId === process.env.ADMIN) {
+//     document.getElementById('share-link').classList.remove('hidden');
+// }
+
+
 
 rsvpButton.addEventListener('click', () => {
     overlay.style.display = 'block';
@@ -29,7 +40,14 @@ function respond(response) {
     thankYouScreen.style.display = 'flex';
 
     window.localStorage.setItem("status", response);
-    response === 'accept' ? submit('Attending', true) : submit("Not Attending", false)
+    const friendId = getURLParameter('share');
+    if (friendId == null) {
+        alert("Click on the link sent to you again!");
+        return;
+    }
+
+    const friend = friendsList.find(friend => friend.id == friendId);
+    response === 'accept' ? submit('Attending', true, friend.name) : submit("Not Attending", false, friend.name)
 
     setTimeout(() => {
         thankYouScreen.style.display = 'none';
@@ -44,40 +62,27 @@ rejectBtn.addEventListener('click', () => {
     respond('reject')
 })
 
-function getURLParameter(name) {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(name);
-}
 
 
-async function submit(status_text, status) {
+async function submit(status_text, status, name) {
     if (status === true) {
         thankYouMessage.textContent = "We're delighted you'll be joining us for our celebration!";
     } else {
         thankYouMessage.textContent = "We're sorry you can't make it, but thank you for letting us know.";
     }
     try {
-
-        const friendId = getURLParameter('share');
-        
-        if(friendId == null){
-            alert("Click on the link sent to you again!");
-            return;
-        }
-
-        const friend = friendsList.find( friend => friend.id == friendId);
         const response = await fetch('api/record/attendance', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({'name': friend.name, 'attending': status_text }),
+            body: JSON.stringify({ 'name': name, 'attending': status_text }),
         });
 
-        if(!response.ok){
-           alert("Could not submit! Try again.");
+        if (!response.ok) {
+            alert("Could not submit! Try again.");
         }
-       
+
     } catch (error) {
         console.error('Error:', error);
     }

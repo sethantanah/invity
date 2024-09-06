@@ -25,6 +25,10 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 
+app.get('/share', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'share.html'));
+});
+
 // Sample API route
 app.post('/api/record/attendance', async (req, res) => {
     const records = await addRecord(req.body);
