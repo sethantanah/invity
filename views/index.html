@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth h-full">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sapphire Anniversary - Joe & Vid Doe</title>
+    <title>Sapphire Anniversary - Joe & Vid Sarpong</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/gallery.css">
     <script>
         tailwind.config = {
             theme: {
@@ -26,94 +25,398 @@
             },
         }
     </script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="/styles/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500&display=swap');
+
+        /* Custom font and colors */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: white;
+        }
+
+        .primary-color {
+            color: #dd1a2e;
+        }
+
+        .bg-primary {
+            background-color: #dd1a2e;
+        }
+
+        /* Fun fonts for names */
+        .name-text {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 3px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Playful accents for sections */
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            text-transform: uppercase;
+            position: relative;
+            color: #dd1a2e;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background-color: #dd1a2e;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Navigation links */
+        .nav-link {
+            position: relative;
+            font-family: 'Montserrat', sans-serif;
+            color: #000;
+        }
+
+        .nav-link:hover {
+            color: #dd1a2e;
+        }
+
+        /* Hover underline effect on nav links */
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 3px;
+            bottom: -2px;
+            left: 50%;
+            background-color: #dd1a2e;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        /* Fun shadow effect on scroll */
+        .shadow-on-scroll {
+            box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Responsive scaling */
+        @media (max-width: 768px) {
+            .name-text {
+                font-size: 2.5rem;
+            }
+        }
+
+
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: white;
+            border-bottom: 2px solid #ccc;
+        }
+    </style>
 </head>
 
-<body class="font-body md:flex md:items-center" id="body">
-    <!-- Hero Section -->
-    <section id="hero" class="relative md:w-[600px]  h-screen flex items-center justify-center mb-0 m-0 p-0">
-        <img src="/assets/InvitImage.png" alt="Anniversary Celebration"
-            class="absolute inset-0 w-full h-full object-cover object-center">
+<body class="md:p-10">
+    <div class="hidden md:block relative min-h-screen bg-cover bg-center animate-fade-in"
+        style="background-image: url('/assets/image.png');">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/70 to-black/30"></div>
         <div
-            class="absolute w-full  md:hidden p-0 m-0 bottom-0 pb-10 flex flex-col items-center rounded-t-sm sm:rounded-none bg-white bg-opacity-0 backdrop-filter backdrop-blur-lg border border-opacity-0 border-white shadow-sm">
-            <div class="relative z-10 mt-10 mb-5 text-center text-white">
-                <h1 class="font-display text-5xl md:text-6xl font-bold mb-4 animate-fadeIn">Celebrating 45 Years of Love
-                </h1>
-                <p class="text-2xl md:text-3xl animate-fadeIn" style="animation-delay: 0.5s;">John & Vivian Sarpong</p>
+            class="relative flex flex-col items-center justify-center min-h-screen text-center text-white z-10 px-4 sm:px-6 lg:px-8">
+            <div class="w-full max-w-4xl mx-auto">
+                <div class="animate-pulse-once mb-8 sm:mb-12">
+                    <h1
+                        class="name-text text-4xl sm:text-5xl md:text-6xl lg:text-7xl primary-color transition-transform transform hover:scale-105 sm:hover:scale-110 duration-500">
+                        John & Vivian Sarpong
+                    </h1>
+                    <p
+                        class="text-xl sm:text-2xl md:text-3xl lg:text-4xl mt-4 transition-transform transform hover:scale-105 duration-500">
+                        45th Anniversary of Love & Joy
+                    </p>
+                </div>
+
             </div>
-            <a href="#details" class="left-1/2 transform -translate-x-1/2 z-20 animate-bounce mt-10">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
+
+            <a href="#header"
+                class="absolute bottom-8 sm:bottom-12 animate-bounce transition-transform hover:scale-110">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12 text-white"
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                 </svg>
             </a>
         </div>
+    </div>
 
-    </section>
 
-    <!-- Details Section -->
-    <section id="details" class="min-h-screen w-full bg-white flex items-center justify-center mt-0">
-        <div class="relative h-screen w-full overflow-hidden flex items-center justify-center">
-            <img src="/assets/InvitImage.png"
-                alt="Happy Anniversary Couple" class="absolute inset-0 w-full h-full object-cover object-center"
-                style="margin-top: -10px;">
-            <div class="absolute inset-0 bg-white opacity-80"></div>
-            <div class="relative z-10 max-w-4xl mx-auto text-center px-7 md:px-20">
-                <h1 class="font-display text-5xl md:text-6xl font-bold mb-4 text-primary animate-slideUp opacity-0"
-                    style="animation-delay: 0.2s;">Our Sapphire Anniversary</h1>
-                <p class="text-xl md:text-2xl mb-6 text-secondary animate-slideUp opacity-0"
-                    style="animation-delay: 0.4s;">Celebrating 45 Years of Love and Joy</p>
-                <div class="w-24 h-1 bg-primary mx-auto mb-8 animate-slideUp opacity-0" style="animation-delay: 0.6s;">
+
+    <div class="md:hidden relative min-h-screen bg-cover bg-center animate-fade-in"
+        style="background-image: url('/assets/image.png');">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/0 to-black/70"></div>
+        <div
+            class="relative flex flex-col items-center justify-center min-h-screen text-center text-white z-10 px-4 sm:px-6 lg:px-8">
+            <div class="w-full max-w-4xl mx-auto">
+                <div class="animate-pulse-once mb-8 sm:mb-12 absolute bottom-12 pb-10">
+                    <h1
+                        class="name-text text-4xl sm:text-5xl md:text-6xl lg:text-7xl primary-color transition-transform transform hover:scale-105 sm:hover:scale-110 duration-500">
+                        John & Vivian Sarpong
+                    </h1>
+                    <p
+                        class="text-xl sm:text-2xl md:text-3xl lg:text-4xl mt-4 transition-transform transform hover:scale-105 duration-500">
+                        45th Anniversary of Love & Joy
+                    </p>
                 </div>
-                <p class="text-2xl mb-2 text-secondary animate-slideUp opacity-0" style="animation-delay: 0.8s;">John &
-                    Vivian Sarpong</p>
-                <p class="text-lg mb-8 text-gray-600 animate-slideUp opacity-0" style="animation-delay: 1s;">invite you
-                    to join their celebration</p>
-                <div class="bg-secondary bg-opacity-10 rounded-lg p-6 mb-8 animate-slideUp opacity-0"
-                    style="animation-delay: 1.2s;">
-                    <div class="flex flex-row justify-center items-center space-x-6">
-                        <div class="text-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto mb-2 text-primary"
-                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+
+            </div>
+
+            <a href="#header"
+                class="absolute bottom-8 sm:bottom-12 animate-bounce transition-transform hover:scale-110">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12 text-white"
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+            </a>
+        </div>
+    </div>
+
+
+    <!-- Navigation Links -->
+    <div id="header" class="sticky-header text-center py-4 mt-0 bg-white">
+        <nav class="space-x-8 text-lg font-semibold">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#events" class="nav-link">Events</a>
+            <a href="#gallery" class="nav-link">Gallery</a>
+            <a href="#faq" class="nav-link">FAQ</a>
+        </nav>
+    </div>
+
+    <!-- Dummy Content to Test Scrolling -->
+    <div class="">
+        <section id="home" class="mb-0">
+            <div>
+                <div id="default-carousel" class="relative w-full" data-carousel="slide">
+                    <!-- Carousel wrapper -->
+                    <div class="overflow-hidden relative w-full h-[500px] md:h-screen slides">
+
+                    </div>
+                    <!-- Slider controls -->
+                    <button type="button"
+                        class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
+                        data-carousel-prev>
+                        <span
+                            class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    d="M15 19l-7-7 7-7"></path>
                             </svg>
-            
-                            <p class="font-semibold text-secondary">October 13, 2024</p>
-                            <p class="font-semibold text-sm opacity-0">13</p>
-                        </div>
-                        <div class="text-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto mb-2 text-primary"
-                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            <span class="hidden">Previous</span>
+                        </span>
+                    </button>
+                    <button type="button"
+                        class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
+                        data-carousel-next>
+                        <span
+                            class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
                             </svg>
-                            <p class="font-semibold text-secondary">5:00 PM</p>
-                            <p class="font-semibold text-sm opacity-0">5</p>
-                        </div>
-                        <div class="text-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto mb-2 text-primary"
-                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
-                            <p class="font-semibold text-secondary">RiJos Rendez Vous</p>
-                            <p class="text-sm text-gray-800">Kumasi - Daban, Near Asafo-Agyei Hospital</p>
+                            <span class="hidden">Next</span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Details Section -->
+        <section id="details" class="min-h-screen w-full bg-white flex items-center justify-center mt-0 z-50">
+            <div class="relative h-screen w-full overflow-hidden flex items-center justify-center">
+                <img src="/assets/InvitImage.png" alt="Happy Anniversary Couple"
+                    class="absolute inset-0 w-full h-full object-cover object-center" style="margin-top: -10px;">
+                <div class="absolute inset-0 bg-white opacity-80"></div>
+                <div class="relative z-10 max-w-4xl mx-auto text-center px-7 md:px-20">
+                    <h1 class="font-display text-5xl md:text-6xl font-bold mb-4 text-primary animate-slideUp opacity-0"
+                        style="animation-delay: 0.2s;">Our Sapphire Anniversary</h1>
+                    <p class="text-xl md:text-2xl mb-6 text-secondary animate-slideUp opacity-0"
+                        style="animation-delay: 0.4s;">Celebrating 45 Years of Love and Joy</p>
+                    <div class="w-24 h-1 bg-primary mx-auto mb-8 animate-slideUp opacity-0"
+                        style="animation-delay: 0.6s;">
+                    </div>
+                    <p class="text-2xl mb-2 text-secondary animate-slideUp opacity-0" style="animation-delay: 0.8s;">
+                        John &
+                        Vivian Sarpong</p>
+                    <p class="text-lg mb-8 text-gray-600 animate-slideUp opacity-0" style="animation-delay: 1s;">invite
+                        you
+                        to join their celebration</p>
+                    <div class="bg-secondary bg-opacity-10 rounded-lg p-6 mb-8 animate-slideUp opacity-0"
+                        style="animation-delay: 1.2s;">
+                        <div class="flex flex-row justify-center items-center space-x-6">
+                            <div class="text-center">
+                                <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto mb-2 text-primary"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg> -->
+
+                                <img src="/assets/calendar.gif" alt="" class="h-8 w-8 mx-auto mb-2 text-primary">
+
+                                <p class="font-semibold text-secondary">October 13, 2024</p>
+                                <p class="font-semibold text-sm opacity-0">13</p>
+                            </div>
+                            <div class="text-center">
+                                <img src="/assets/clock.gif" alt="" class="h-8 w-8 mx-auto mb-2 text-primary">
+                                <p class="font-semibold text-secondary">3:30 PM</p>
+                                <p class="font-semibold text-sm opacity-0">5</p>
+                            </div>
+                            <a href="https://www.google.com/maps/dir/5.6762532,-0.1390435/rijos+rendez+vous/@6.1998103,-2.1867285,8z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0xfdb9184bcc48695:0x9afc893458905c33!2m2!1d-1.6186466!2d6.6414935?entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D"
+                                target="_blank" rel="noopener noreferrer">
+                                <div class="text-center">
+                                    <img src="/assets/location.gif" alt="" class="h-9 w-9 mt-6 mx-auto  text-primary">
+                                    <p class="font-semibold text-secondary mt-0">RiJos Rendez Vous</p>
+                                    <p class="text-sm text-gray-800">Kumasi - Daban, Near Asafo-Agyei Hospital</p>
+                                    <p class="text-sm text-gray-800">(click to see location)</p>
+                                </div>
                         </div>
                     </div>
+                    </a>
+                    <button id="rsv"
+                        class="bg-primary z-100 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-opacity-90 transition duration-300 animate-pulse-and-glow">
+                        RSVP Now
+                    </button>
                 </div>
-                <button
-                class="bg-primary text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-opacity-90 transition duration-300 animate-pulse-and-glow"
-              >
-                RSVP Now
-              </button>
             </div>
+        </section>
+
+        <section id="events" class="m-5 md:ml-0 mr-0 mt-5 mb-5 md:mt-10 md:mb-10">
+            <h2 class="section-title">Events</h2>
+            <p class="mt-4">Mark your calendars for a fun-filled day! From the ceremony to the reception, every moment
+                is designed with love and laughter in mind.</p>
+        </section>
+
+        <section id="love-story" class="m-5 md:ml-0 mr-0 mt-5 mb-5 hidden md:block">
+            <h2 class="section-title" class="mb-5">Our Love Story</h2>
+            <div id="carousel-wrapper" class="mt-10">
+                <div id="menu">
+                    <div id="current-option">
+                        <span id="current-option-text1" data-previous-text="" data-next-text=""></span>
+                        <span id="current-option-text2" data-previous-text="" data-next-text=""></span>
+                    </div>
+                    <button id="previous-option"></button>
+                    <button id="next-option"></button>
+                </div>
+                <div id="image"></div>
+            </div>
+
+        </section>
+
+
+
+        <section id="love-story" class="md:ml-0 mr-0 mt-5 mb-5 md:hidden">
+            <h2 class="section-title ml-5" class="mb-5">Our Love Story</h2>
+            <div class="container">
+                <div class="card-carousel">
+                    <div class="card story-end" id="1">
+                        <div class="image-container"></div>
+                        <p>The End</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section id="gallery" class="md:ml-0 md:mr-0 mt-5 mb-5 ">
+            <h2 class="section-title ml-5" class="mb-5">Gallery</h2>
+            <div class="gallery mt-5 hidden">
+
+            </div>
+
+            <div class="gallery2 mt-5 p-4  grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            </div>
+
+        </section>
+
+
+        <section id="faq" class="m-5 md:ml-0 mr-0 mt-5 mb-5">
+            <h2 class="section-title ml-5">FAQ</h2>
+            <div class="text-center">
+                <div class="mt-6">
+                    <h3 class="text-xl font-semibold">Is there a dress code for the wedding?</h3>
+                    <p class="mt-2">Please dress to celebrate and feel your best!</p>
+                </div>
+    
+                <div class="mt-6">
+                    <h3 class="text-xl font-semibold">Are children welcome at the wedding?</h3>
+                    <p class="mt-2">Although we adore your little ones, this is an adult-only affair.</p>
+                </div>
+    
+                <div class="mt-6">
+                    <h3 class="text-xl font-semibold">If we wish to give a cash gift, where should we send it?</h3>
+                    <p class="mt-2">
+                        Your presence at our wedding is present enough, but if we are honored with a gift from you, a
+                        monetary gift is preferred.
+                    </p>
+                </div>
+    
+                <div class="mt-8">
+                    <h3 class="text-xl font-semibold">Mobile Money Details</h3>
+                    <p class="mt-2">
+                        <strong>MTN Mobile Money</strong><br>
+                        0549471690<br>
+                        Naa Bridal
+                    </p>
+                </div>
+    
+                <div class="mt-8">
+                    <h3 class="text-xl font-semibold">Bank Details</h3>
+                    <p class="mt-2">
+                        <strong>Rachael Dadson & Albert Opoku</strong><br>
+                        00837496502572<br>
+                        UBA Ghana Ltd<br>
+                        Dzorwulu Branch
+                    </p>
+                </div>
+                <p class="mt-4 text-lg">
+                    Have questions? We've got answers to help make your experience smooth and enjoyable.
+                </p>
+    
+                <div class="mt-6">
+                    <h3 class="text-xl font-semibold">Who can we contact if we have more questions?</h3>
+                    <p class="mt-2">
+                        For RSVP or website questions, contact:
+                        <br>
+                        <strong>Seth</strong> - <a href="https://wa.me/2330265315585" target="_blank"
+                            class="text-blue-500 underline">+233 26 531 5585</a> on WhatsApp
+                    </p>
+                    <p class="mt-4">
+                        For all other questions, please contact:
+                        <br>
+                        <strong>Kofi</strong> - <a href="https://wa.me/233265315585" target="_blank"
+                            class="text-blue-500 underline">+233 26 531 5585</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+
+    
+        <!-- Fullscreen modal -->
+        <div id="fullscreenModal" class="fixed inset-0 flex">
+            <span id="closeModal" class="absolute top-4 right-4 text-white text-4xl cursor-pointer">&times;</span>
+            <img id="fullscreenImage" src="" alt="">
         </div>
-    </section>
 
     <!-- Add these elements at the end of the body -->
     <div class="overlay" id="overlay"></div>
@@ -122,16 +425,28 @@
         <p class="mb-4">Will you be attending the celebration?</p>
         <div class="flex justify-center space-x-4">
             <button id="accept" class="bg-primary text-white px-4 py-2 rounded">Accept</button>
-            <button id="reject"  class="bg-gray-500 text-white px-4 py-2 rounded">Decline</button>
+            <button id="reject" class="bg-gray-500 text-white px-4 py-2 rounded">Decline</button>
         </div>
     </div>
     <div class="thank-you-screen p-5" id="thankYouScreen">
         <h2 class="text-4xl font-bold mb-4">Thank You!</h2>
         <p class="text-xl" id="thankYouMessage"></p>
     </div>
+
+    <!-- JavaScript for sticky shadow effect -->
+    <script>
+        window.addEventListener('scroll', function () {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-on-scroll');
+            } else {
+                header.classList.remove('shadow-on-scroll');
+            }
+        });
+    </script>
+    <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
     <script src="/scripts/main.mjs" type="module"></script>
+    <script src="/scripts/carrousel.mjs" type="module"></script>
 </body>
 
-<script>
-</script>
 </html>
