@@ -475,7 +475,7 @@ image_options4.forEach((image, index) => {
 
     // Create the text paragraph
     const textParagraph = document.createElement('p');
-    textParagraph.textContent = (index + 1) +  ' ' + text4_options[index];
+    textParagraph.textContent = (index + 1) +  '. ' + text4_options[index];
 
     // Append the image container and paragraph to the card
     cardItem.appendChild(imageContainer);
