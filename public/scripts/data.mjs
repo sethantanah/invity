@@ -1,5 +1,12 @@
 export const friendsList = [
     { id: "Seth31", name: "Seth Antanah", phone: "+2330591971286" },
+    { id: "rks44", name: "Richard Kwabi Sarpong", phone: "+2330244539744" },
+    { id: "pks85", name: "Perez Kwabi Sarpong", phone: "+2330265315585" },
+    { id: "kwg78", name: "Kwame Gyanfi", phone: "+16479176978" },
+    { id: "dks24", name: "Daniel Kwabi Sarpong", phone: "+2330544331924" },
+    { id: "jks26", name: "Jernice Kwabi Sarpong", phone: "+2330541373626" },
+    { id: "bks10", name: "Bernice Kwabi Sarpong", phone: "+2330203534810" },
+    { id: "kks71", name: "Karen Kwabi Sarpong", phone: "+2330245219271" },
     { id: "Oph92", name: "Ophilia Boachie", phone: "+2330244963192" },
     { id: "Asa90", name: "Asare Asiamah", phone: "+2330243146390" },
     { id: "Max05", name: "Maxwell Sarpong", phone: "+2330205305005" },
