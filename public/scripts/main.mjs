@@ -65,7 +65,7 @@ async function submit(status_text, status, name) {
     if (status === true) {
         thankYouMessage.textContent = "We're delighted you'll be joining us for our celebration!";
     } else {
-        thankYouMessage.textContent = "We're sorry you can't make it, but thank you for letting us know.";
+        thankYouMessage.textContent = "Thank you for letting us know.";
     }
     try {
         const response = await fetch('api/record/attendance', {
