@@ -123,20 +123,18 @@
     </style>
 </head>
 
-<body class="md:p-10">
-    <div class="hidden md:block relative min-h-screen bg-cover bg-center animate-fade-in"
-        style="background-image: url('/assets/image.png');">
-        <div class="absolute inset-0 bg-gradient-to-b from-black/70 to-black/30"></div>
+<body class="md:p-[200px] md:pt-[10px]">
+    <div class="hidden md:block relative min-h-screen bg-contain bg-center animate-fade-in">
         <div
-            class="relative flex flex-col items-center justify-center min-h-screen text-center text-white z-10 px-4 sm:px-6 lg:px-8">
-            <div class="w-full max-w-4xl mx-auto">
-                <div class="animate-pulse-once mb-8 sm:mb-12">
+            class="relative flex flex-col items-center min-h-screen text-center text-white z-10 px-4 sm:px-6 lg:px-8">
+            <div class="w-full max-w-4xl mx-auto mt-[150px]">
+                <div class="animate-pulse-once">
                     <h1
-                        class="name-text text-4xl sm:text-5xl md:text-6xl lg:text-7xl primary-color transition-transform transform hover:scale-105 sm:hover:scale-110 duration-500">
+                        class="name-text text-4xl mb-10 sm:text-5xl md:text-6xl lg:text-7xl primary-color transition-transform transform hover:scale-105 sm:hover:scale-110 duration-500">
                         John & Vivian Sarpong
                     </h1>
                     <p
-                        class="text-xl sm:text-2xl md:text-3xl lg:text-4xl mt-4 transition-transform transform hover:scale-105 duration-500">
+                        class="text-xl sm:text-2xl md:text-3xl text-primary lg:text-4xl mt-4 transition-transform transform hover:scale-105 duration-500">
                         45th Anniversary of Love & Joy
                     </p>
                 </div>
@@ -219,15 +217,16 @@
     <div id="header" class="sticky-header text-center py-4 mt-0  bg-primary border-primary">
         <nav class="space-x-8 text-lg font-semibold text-white">
             <a href="#home" class="nav-link text-white">Home</a>
-            <a href="#events" class="nav-link text-white">Events</a>
+            <a href="#rsvp" class="nav-link text-white">RSVP</a>
             <a href="#gallery" class="nav-link text-white">Gallery</a>
+             <!-- <a href="#events" class="nav-link text-white">Events</a> -->
             <a href="#faq" class="nav-link text-white">FAQ</a>
         </nav>
     </div>
 
     <!-- Dummy Content to Test Scrolling -->
     <div>
-        <section id="home" class="mb-0">
+        <section id="home" class="mb-0 md:hidden">
             <div>
                 <div id="default-carousel" class="relative w-full" data-carousel="slide">
                     <!-- Carousel wrapper -->
@@ -266,13 +265,13 @@
         </section>
 
         <!-- Details Section -->
-        <section id="details" class="min-h-screen w-full bg-white flex items-center justify-center mt-0 z-50">
+        <section id="rsvp" class="min-h-screen w-full bg-white flex items-center justify-center mt-0 z-50">
             <div class="relative h-screen w-full overflow-hidden flex items-center justify-center">
                 <img src="/assets/InvitImage.png" alt="Happy Anniversary Couple"
                     class="absolute inset-0 w-full h-full object-cover object-center">
                 <div class="absolute inset-0 bg-white opacity-80"></div>
                 <div class="relative z-10 max-w-4xl mx-auto text-center px-7 md:px-20">
-                    <h1 class="font-display text-5xl md:text-6xl font-bold mb-4 text-primary animate-slideUp opacity-0"
+                    <h1 class="font-display  text-5xl md:text-6xl font-bold mb-4 text-primary animate-slideUp opacity-0 pt-3"
                         style="animation-delay: 0.2s;">Our Sapphire Anniversary</h1>
                     <p class="text-xl md:text-2xl mb-6 text-secondary animate-slideUp opacity-0"
                         style="animation-delay: 0.4s;">Celebrating 45 Years of Love and Joy</p>
@@ -298,7 +297,7 @@
                                 <p class="font-semibold text-secondary">3:30 PM</p>
                                 <p class="font-semibold text-sm opacity-0">5</p>
                             </div>
-                            <div class="text-center col-span-2">
+                            <div class="text-center col-span-2 md:col-span-1">
                                 <a href="https://www.google.com/maps/dir/5.6762532,-0.1390435/rijos+rendez+vous/@6.1998103,-2.1867285,8z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0xfdb9184bcc48695:0x9afc893458905c33!2m2!1d-1.6186466!2d6.6414935?entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D"
                                     target="_blank" rel="noopener noreferrer">
                                     <img src="/assets/location.gif" alt="" class="h-9 w-9 mx-auto  text-primary">
@@ -314,17 +313,18 @@
                         class="bg-primary z-100 text-white px-8 py-3 mt-10 rounded-full text-lg font-semibold hover:bg-opacity-90 transition duration-300 animate-pulse-and-glow">
                         RSVP Now
                     </button>
+                    <p class="text-sm text-gray-800">(click to accept invitation)</p>
                     </div>
                     
                 </div>
             </div>
         </section>
-
+<!-- 
         <section id="events" class="m-5 md:ml-0  mt-5 mb-5 md:mt-10 md:mb-10">
             <h2 class="section-title">Events</h2>
             <p class="mt-4">Mark your calendars for a fun-filled day! From the ceremony to the reception, every moment
                 is designed with love and laughter in mind.</p>
-        </section>
+        </section> -->
 
         <section id="love-story" class="m-5 md:ml-0 mr-0 mt-5 mb-5 hidden md:block">
             <h2 class="section-title" class="mb-5">Our Love Story</h2>
@@ -373,43 +373,6 @@
 
         <section id="faq" class="m-5 md:ml-0 md:mr-0 mt-5 mb-5">
             <h2 class="section-title ml-5">FAQ</h2>
-            <div class="text-center">
-                <div class="mt-6">
-                    <h3 class="text-xl font-semibold">Is there a dress code for the wedding?</h3>
-                    <p class="mt-2">Please dress to celebrate and feel your best!</p>
-                </div>
-
-                <div class="mt-6">
-                    <h3 class="text-xl font-semibold">Are children welcome at the wedding?</h3>
-                    <p class="mt-2">Although we adore your little ones, this is an adult-only affair.</p>
-                </div>
-
-                <div class="mt-6">
-                    <h3 class="text-xl font-semibold">If we wish to give a cash gift, where should we send it?</h3>
-                    <p class="mt-2">
-                        Your presence at our wedding is present enough, but if we are honored with a gift from you, a
-                        monetary gift is preferred.
-                    </p>
-                </div>
-
-                <div class="mt-8">
-                    <h3 class="text-xl font-semibold">Mobile Money Details</h3>
-                    <p class="mt-2">
-                        <strong>MTN Mobile Money</strong><br>
-                        0549471690<br>
-                        Naa Bridal
-                    </p>
-                </div>
-
-                <div class="mt-8">
-                    <h3 class="text-xl font-semibold">Bank Details</h3>
-                    <p class="mt-2">
-                        <strong>Rachael Dadson & Albert Opoku</strong><br>
-                        00837496502572<br>
-                        UBA Ghana Ltd<br>
-                        Dzorwulu Branch
-                    </p>
-                </div>
                 <p class="mt-4 text-lg">
                     Have questions? We've got answers to help make your experience smooth and enjoyable.
                 </p>

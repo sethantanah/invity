@@ -10,7 +10,7 @@ for (let index = 1; index <= 8; index++) {
 
     slides.innerHTML += `<div class="hidden duration-700 ease-in-out object-contain" data-carousel-item>
                             <img src="${path}"
-                                class="block absolute object-contain md:h-[500px] top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2"
+                                class="block absolute object-contain md:object-cover md:h-[500px] top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2"
                                 alt="...">
                         </div>`;
 
