@@ -76,6 +76,13 @@ body, section{
     border: 0px;
 }
 
+@media only screen and (width: 375px) and (height: 667px) {
+    #rsvp{
+        height: auto;
+    }
+}
+
+
 .popover {
     display: none;
     position: fixed;
