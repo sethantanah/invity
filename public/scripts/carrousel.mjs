@@ -4,9 +4,9 @@ const slides = document.querySelector('.slides');
 const gallery = document.querySelector('.gallery');
 const gallery2 = document.querySelector('.gallery2');
 let images = [];
-for (let index = 1; index <= 50; index++) {
+for (let index = 1; index <= 6; index++) {
     try{
-        const path = `/assets/gallery/${index}.jpeg`;
+        const path = `/assets/gallery/${index}.jpg`;
         images.push(path)
     
         slides.innerHTML += `<div class="hidden duration-700 ease-in-out object-contain" data-carousel-item>

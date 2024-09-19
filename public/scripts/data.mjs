@@ -22,7 +22,6 @@ export const friendsList = [
   { "id": "dabo587", "name": "Daniel osei Bonsu", "phone": "+233243969587" },
   { "id": "pfbo238", "name": "Patrick Fosu Boateng", "phone": "+233243472238" },
   { "id": "agsa232", "name": "Agei Sarpong", "phone": "+233244879232" },
-  { "id": "fafi262", "name": "Frank Adu Fish", "phone": "+233244461262" },
   { "id": "tute922", "name": "Tupen Tema", "phone": "+233243261922" },
   { "id": "nant420", "name": "Nana Akko or Ntiamoa", "phone": "+233591389420" },
   { "id": "omti600", "name": "Owusu Mensah Tikese", "phone": "+233555261600" },
@@ -46,14 +45,20 @@ export const friendsList = [
   { "id": "amgo317", "name": "Ampansa Godfrey", "phone": "+233244630817" },
   { "id": "sabo970", "name": "Samuel Boakye", "phone": "+233208125970" },
   { "id": "alse117", "name": "Alberta & Serwaa Broby", "phone": "+233247112117" },
-  { "id": "jsat346", "name": "J S Atefa", "phone": "+233208402846" },
+  { "id": "frte248", "name": "Francis Amartey", "phone": "+233554024889" },
   { "id": "kiap318", "name": "Kingsford Appiah", "phone": "+233556572318" },
   { "id": "reap346", "name": "Rebecca Appia  & Sis Badu", "phone": "+233243347346" },
   { "id": "agya323", "name": "Aboagye Agyie", "phone": "+233261539323" },
   { "id": "mabo993", "name": "Mark Asare Boateng", "phone": "+233244582993" },
   { "id": "fran659", "name": "Frank owusu Ansah", "phone": "+233242017659" },
   { "id": "fram889", "name": "Francis Amartey", "phone": "+233554024889" },
-  { "id": "saow147", "name": "Samuel Owusu", "phone": "+233244519147" }
+  { "id": "saow147", "name": "Samuel Owusu", "phone": "+233244519147" },
+  { "id": "abah945", "name": "Aboagye Appiah", "phone": "+233541689457" },
+  { "id": "biso824", "name": "Brother Isaac Frimpong", "phone": "+233244882417" },
+  { "id": "beth617", "name": "Anthony Bekoe", "phone": "+233541371615" },
+  { "id": "opme371", "name": "Opoku Mensah", "phone": "+233553813761" },
+  { "id": "bdvi822", "name": "Badu Dovi", "phone": "+233241422843" },
+  { "id": "anda862", "name": "Adu Nyame Da-Costa", "phone": "+233595466851" }
 ];
 
 

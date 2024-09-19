@@ -67,26 +67,26 @@ async function submit(status_text, status, name) {
     } else {
         thankYouMessage.textContent = "Thank you for letting us know.";
     }
-    // try {
-    //     const response = await fetch('api/record/attendance', {
-    //         method: 'POST',
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //         },
-    //         body: JSON.stringify({ 'name': name, 'attending': status_text }),
-    //     });
+    try {
+        const response = await fetch('api/record/attendance', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ 'name': name, 'attending': status_text }),
+        });
 
-    //     if (!response.ok) {
-    //         alternativeStorage(name, status_text);
-    //         //alert("Could not submit! Try again.");
-    //     }else{
-    //         alternativeStorage(name, status_text);
-    //     }
+        if (!response.ok) {
+            alternativeStorage(name, status_text);
+            //alert("Could not submit! Try again.");
+        }else{
+            alternativeStorage(name, status_text);
+        }
 
-    // } catch (error) {
-    //     alternativeStorage(name, status_text);
-    //     console.error('Error:', error);
-    // }
+    } catch (error) {
+        alternativeStorage(name, status_text);
+        console.error('Error:', error);
+    }
 
 }
 
