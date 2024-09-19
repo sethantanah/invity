@@ -120,3 +120,14 @@ body, section{
     flex-direction: column;
     text-align: center;
 }
+
+.cursor-pointer {
+    cursor: pointer;
+}
+.hidden {
+    display: none;
+}
+.chevron-icon {
+    transition: transform 0.3s ease;
+    font-size: 1.2rem; /* Adjust icon size */
+}

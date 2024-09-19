@@ -112,3 +112,17 @@ async function alternativeStorage(name, status) {
             console.error('Error:', error);
         });
 }
+
+
+document.querySelectorAll('.faq-item h3').forEach((item) => {
+    item.addEventListener('click', () => {
+        const answer = item.nextElementSibling;
+        const chevronIcon = item.querySelector('.chevron-icon');
+
+        // Toggle the 'hidden' class for the answer
+        answer.classList.toggle('hidden');
+
+        // Toggle the chevron icon direction
+        chevronIcon.style.transform = answer.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+    });
+});
