@@ -30,7 +30,7 @@ friendsList.forEach(friend => {
     actionCell.className = "py-2 px-4 border-b text-center flex flex-row gap-2";
     
     // WhatsApp Button
-    const message = `John and Vivian's 45th Anniversary Invitation.\n link: https://johnandvivian.com/?share=${friend.id}`;
+    const message = `John and Vivian's 45th Anniversary Invitation.\nlink: https://johnandvivian.com/?share=${friend.id}`;
     const whatsappLink = document.createElement("a");
     whatsappLink.href = `https://wa.me/${friend.phone.replace(/\D/g, '')}?text=${encodeURIComponent(message)}`; // WhatsApp share link
     whatsappLink.target = "_blank";
