@@ -16,7 +16,7 @@ for (let index = 1; index <= 13; index++) {
                             </div>`;
     
         gallery.innerHTML += `<img src="${path}" alt="" loading="lazy" />`
-        gallery2.innerHTML += `<div class="relative"><img src="${path}" loading="lazy" alt="" class="w-full h-100 object-cover  shadow-lg cursor-pointer"></div>`;
+        gallery2.innerHTML += `<div class="relative"><img src="${path}" loading="lazy" alt="" class="w-full   shadow-lg cursor-pointer"></div>`;
     }catch(error){
 
     }
