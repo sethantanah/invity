@@ -4,7 +4,7 @@ const slides = document.querySelector('.slides');
 const gallery = document.querySelector('.gallery');
 const gallery2 = document.querySelector('.gallery2');
 let images = [];
-for (let index = 1; index <= 6; index++) {
+for (let index = 1; index <= 13; index++) {
     try{
         const path = `/assets/gallery/${index}.jpg`;
         images.push(path)
@@ -12,11 +12,11 @@ for (let index = 1; index <= 6; index++) {
         slides.innerHTML += `<div class="hidden duration-700 ease-in-out object-contain" data-carousel-item>
                                 <img src="${path}"
                                     class="block absolute object-contain md:object-cover md:h-[500px] top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2"
-                                    alt="...">
+                                    alt="..." loading="lazy">
                             </div>`;
     
-        gallery.innerHTML += `<img src="${path}" alt="" />`
-        gallery2.innerHTML += `<div class="relative"><img src="${path}" alt="" class="w-full h-100 object-cover  shadow-lg cursor-pointer"></div>`;
+        gallery.innerHTML += `<img src="${path}" alt="" loading="lazy" />`
+        gallery2.innerHTML += `<div class="relative"><img src="${path}" loading="lazy" alt="" class="w-full h-100 object-cover  shadow-lg cursor-pointer"></div>`;
     }catch(error){
 
     }
