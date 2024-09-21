@@ -27,7 +27,7 @@ friendsList.forEach(friend => {
 
     // Actions Column
     const actionCell = document.createElement("td");
-    actionCell.className = "py-2 px-4 border-b text-center";
+    actionCell.className = "py-2 px-4 border-b text-center flex flex-row gap-2";
     
     // WhatsApp Button
     const message = `John and Vivian's 45th Anniversary Invitation.\n link: https://johnandvivian.com/?share=${friend.id}`;
