@@ -71,6 +71,8 @@ export const friendsList = [
   { "id": "naff365", "name": "Nana Tuffour", "phone": "+2330553689924" },
   { "id": "ofgi052", "name": "Offer & Gifty", "phone": "+2330502451944" },
   { "id": "dltk021", "name": "Daniel  Amankwah Boateng", "phone": "+2330203890415" },
+  { "id": "ucfd273", "name": "Uncle Fred", "phone": "+2330244787673" },
+  {"id": "bysa209", "name": "Brother Mensah Senyah", "phone": "+2330244092900"},
   { "id": "Seth31", "name": "Seth Antanah", "phone": "+2330591971286" },
 ];
 

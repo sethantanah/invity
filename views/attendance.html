@@ -32,6 +32,7 @@
     fetch('/api/record/load-data')
       .then(response => response.json())
       .then(data => {
+        try{
         const csvData = data.csvData.trim();
         let rows = csvData.split('\n'); // Keep the header
         
@@ -60,6 +61,10 @@
 
         // Show the table
         document.getElementById('data-table').hidden = false;
+        }
+        catch(error){
+          console.error(error);
+        }
       })
       .catch(error => {
         console.error('Error loading data:', error);
