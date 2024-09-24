@@ -59,7 +59,19 @@ export const friendsList = [
   { "id": "opme371", "name": "Opoku Mensah", "phone": "+233553813761" },
   { "id": "bdvi822", "name": "Badu Dovi", "phone": "+233241422843" },
   { "id": "anda862", "name": "Adu Nyame Da-Costa", "phone": "+233595466851" },
-  { id: "Seth31", name: "Seth Antanah", phone: "+2330591971286" },
+  { "id": "diaa340", "name": "Claudia Ayemele", "phone": "+2330244034687" },
+  { "id": "meha680", "name": "Dwumeh Antwi", "phone": "+2330244688160" },
+  { "id": "stia742", "name": "Faustine Adane", "phone": "+2330244474024" },
+  { "id": "eaph341", "name": "Ester Dapaah", "phone": "+2330243143700" },
+  { "id": "jdah131", "name": "John Dapaah", "phone": "+2330241130343" },
+  { "id": "sear694", "name": "Sewaa Sarponmaa", "phone": "+2330244369747" },
+  { "id": "aure274", "name": "Faustina Kyremeh", "phone": "+2330247890056" },
+  { "id": "aayi804", "name": "Akua Afriyie", "phone": "+2330550848113" },
+  { "id": "drbo217", "name": "Dr Boateng", "phone": "+2330244417403" },
+  { "id": "naff365", "name": "Nana Tuffour", "phone": "+2330553689924" },
+  { "id": "ofgi052", "name": "Offer & Gifty", "phone": "+2330502451944" },
+  { "id": "dltk021", "name": "Daniel  Amankwah Boateng", "phone": "+2330203890415" },
+  { "id": "Seth31", "name": "Seth Antanah", "phone": "+2330591971286" },
 ];
 
 
