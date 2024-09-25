@@ -4,7 +4,7 @@ const slides = document.querySelector('.slides');
 const gallery = document.querySelector('.gallery');
 const gallery2 = document.querySelector('.gallery2');
 let images = [];
-for (let index = 1; index <= 13; index++) {
+for (let index = 1; index <= 14; index++) {
     try{
         const path = `/assets/gallery/${index}.jpg`;
         images.push(path)
