@@ -58,7 +58,6 @@ export const friendsList = [
   { "id": "opme371", "name": "Opoku Mensah", "phone": "+233553813761" },
   { "id": "bdvi822", "name": "Badu Dovi", "phone": "+233241422843" },
   { "id": "anda862", "name": "Adu Nyame Da-Costa", "phone": "+233595466851" },
-  { "id": "diaa340", "name": "Claudia Ayemele", "phone": "+2330244034687" },
   { "id": "meha680", "name": "Dwumeh Antwi", "phone": "+2330244688160" },
   { "id": "stia742", "name": "Faustine Adane", "phone": "+2330244474024" },
   { "id": "eaph341", "name": "Ester Dapaah", "phone": "+2330243143700" },
@@ -84,6 +83,9 @@ export const friendsList = [
   { "id": "qydd345", "name": "Daddy Q", "phone": "+2330244253477" },
   { "id": "ajff064", "name": "Janet Afful", "phone": "+233206038406" },
   { "id": "aarf057", "name": "⁠Anna Rosa Afful", "phone": "+2330263530750" },
+  { "id": "diaa340", "name": "Claudia Ayemedu", "phone": "+2330277185276" },
+  { "id": "tkw713", "name": "kwame Tawiah", "phone": "+2330205553174" },
+  { "id": "", "name": "", "phone": "" },
   { "id": "Seth31", "name": "Seth Antanah", "phone": "+2330591971286" },
 ];
 
