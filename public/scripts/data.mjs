@@ -73,10 +73,17 @@ export const friendsList = [
   { "id": "dltk021", "name": "Daniel  Amankwah Boateng", "phone": "+2330203890415" },
   { "id": "ucfd273", "name": "Uncle Fred", "phone": "+2330244787673" },
   {"id": "bysa209", "name": "Brother Mensah Senyah", "phone": "+2330244092900"},
+  {"id": "ikgy571", "name": "I K Gyamfi", "phone": "+2330242846517"},
+  {"id": "asre324", "name": "Asare  Asiama", "phone": "+2330243464390"},
+  {"id": "sisa420", "name": "Sis Ama Amoaku Adu", "phone": "+2330242380801"},
+  {"id": "mjbo191", "name": "Maa Juliet Boateng", "phone": "+2330244218911"},
+  {"id": "kbif786", "name": "Kofi Bro", "phone": "+2330248184876"},
+  {"id": "jebt320", "name": "Brother Joseph Enyan", "phone": "+2330246303604"},
   { "id": "Seth31", "name": "Seth Antanah", "phone": "+2330591971286" },
 ];
 
-
+  // {"id": "", "name": "", "phone": "+233"},
+  // {"id": "", "name": "", "phone": "+233"},
 
 
 
