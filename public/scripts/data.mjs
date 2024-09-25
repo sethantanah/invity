@@ -54,7 +54,7 @@ export const friendsList = [
   { "id": "saow147", "name": "Samuel Owusu", "phone": "+233244519147" },
   { "id": "abah945", "name": "Aboagye Appiah", "phone": "+233541689457" },
   { "id": "biso824", "name": "Brother Isaac Frimpong", "phone": "+233244882417" },
-  { "id": "beth617", "name": "Anthony Bekoe", "phone": "+233541371615" },
+  { "id": "beth617", "name": "Anthony Bekoe", "phone": "+233543283737" },
   { "id": "opme371", "name": "Opoku Mensah", "phone": "+233553813761" },
   { "id": "bdvi822", "name": "Badu Dovi", "phone": "+233241422843" },
   { "id": "anda862", "name": "Adu Nyame Da-Costa", "phone": "+233595466851" },
