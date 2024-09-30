@@ -98,6 +98,7 @@ export const friendsList = [
   { "id": "akko322", "name": " Kwaku  Akuako", "phone": "+2330243523522" },
   { "id": "asit751", "name": "Seth  Aidoo", "phone": "+2330551750112" },
   { "id": "taul866", "name": "Laudina Amorkor Tetteh", "phone": "+2330262178174" },
+  {"id": "cbat790", "name": "Bro Asare Cement", "phone": "+233024076609497"},
   { "id": "Seth31", "name": "Seth Antanah", "phone": "+2330591971286" },
 ];
 
