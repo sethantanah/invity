@@ -98,9 +98,84 @@ export const friendsList = [
   { "id": "akko322", "name": " Kwaku  Akuako", "phone": "+2330243523522" },
   { "id": "asit751", "name": "Seth  Aidoo", "phone": "+2330551750112" },
   { "id": "taul866", "name": "Laudina Amorkor Tetteh", "phone": "+2330262178174" },
-  {"id": "cbat790", "name": "Bro Asare Cement", "phone": "+2330247669497"},
-  {"id": "meln187", "name": "Ella Mtn❤️💕💖💗", "phone": "+2330248881874"},
-  { "id": "Seth31", "name": "Seth Antanah", "phone": "+2330591971286" },
+  { "id": "cbat790", "name": "Bro Asare Cement", "phone": "+2330247669497" },
+  { "id": "meln187", "name": "Ella Mtn❤️💕💖💗", "phone": "+2330248881874" },
+  {
+    "id": "mhpl576",
+    "name": "Paul Mensah",
+    "phone": "+2330543639527"
+  },
+  {
+    "id": "oifa739",
+    "name": "Isaac Ofori",
+    "phone": "+2330240093497"
+  },
+  {
+    "id": "idwa152",
+    "name": "Kwame Addi",
+    "phone": "+2330242701531"
+  },
+  {
+    "id": "ahpk241",
+    "name": "Kwame Appiah",
+    "phone": "+2330242812101"
+  },
+  {
+    "id": "swaa094",
+    "name": "Yaa Serwaa",
+    "phone": "+2330542460944"
+  },
+  {
+    "id": "tafk356",
+    "name": "Kofi Tawia",
+    "phone": "+2330553458756"
+  },
+  {
+    "id": "aanm056",
+    "name": "Mercy Anno Aidoo",
+    "phone": "+2330559506764"
+  },
+  {
+    "id": "magy115",
+    "name": "Akosua Agyemang",
+    "phone": "+2330553313030"
+  },
+  {
+    "id": "rpny497",
+    "name": "Agyei Sarpong",
+    "phone": "+2330244879232"
+  },
+  {
+    "id": "cdna018",
+    "name": "Addu Nyame Da Costa",
+    "phone": "+2330208125820"
+  },
+  {
+    "id": "bddt375",
+    "name": "Dorothy Attaku Buatsi",
+    "phone": "+2330597262396"
+  },
+  {
+    "id": "hzak083",
+    "name": "Keziah",
+    "phone": "+2330542935073"
+  },
+  {
+    "id": "xffe709",
+    "name": "Effie x",
+    "phone": "+2330555890710"
+  },
+  {
+    "id": "lldx346",
+    "name": "Lily x Darren",
+    "phone": "+447818946330"
+  },
+  {
+    "id": "aagl95",
+    "name": "Abagail Adjei",
+    "phone": "+2330261539323"
+  },
+  { "id": "seth31", "name": "Seth Antanah", "phone": "+2330591971286" },
 ];
 
 //{"id": "", "name": "", "phone": "+233"},
