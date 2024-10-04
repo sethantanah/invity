@@ -175,6 +175,13 @@ export const friendsList = [
     "name": "Abagail Adjei",
     "phone": "+2330261539323"
   },
+
+  {"id": "mtls098", "name": "Solos Mtn", "phone": "+2330543290286"},
+  {"id": "kchg312", "name": "Cynthia Kyeremateng", "phone": "+2330244731132"},
+  {"id": "uamc592", "name": "Comfort Adu", "phone": "+2330544445695"},
+  {"id": "mbtv250", "name": "Mavis Boatemaa Amponsah ", "phone": "+2330202513118"},
+  {"id": "swoy725", "name": "Appiahmay56 Sis Adwoa", "phone": "+2330243713753"},
+  {"id": "eymk905", "name": "Kwame Yeboah", "phone": "+2330594959828"},
   { "id": "seth31", "name": "Seth Antanah", "phone": "+2330591971286" },
 ];
 
