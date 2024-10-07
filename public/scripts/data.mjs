@@ -175,7 +175,8 @@ export const friendsList = [
     "name": "Abagail Adjei",
     "phone": "+2330261539323"
   },
-
+  {"id": "amwl950", "name": "Mabel Ampaw", "phone": "+2330545409052"},
+  {"id": "rtsa183", "name": "Patricia Erskein", "phone": "+2330244071288"},
   {"id": "mtls098", "name": "Solos Mtn", "phone": "+2330543290286"},
   {"id": "kchg312", "name": "Cynthia Kyeremateng", "phone": "+2330244731132"},
   {"id": "uamc592", "name": "Comfort Adu", "phone": "+2330544445695"},
