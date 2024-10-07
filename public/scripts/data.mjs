@@ -182,27 +182,10 @@ export const friendsList = [
   {"id": "mbtv250", "name": "Mavis Boatemaa Amponsah ", "phone": "+2330202513118"},
   {"id": "swoy725", "name": "Appiahmay56 Sis Adwoa", "phone": "+2330243713753"},
   {"id": "eymk905", "name": "Kwame Yeboah", "phone": "+2330594959828"},
-  { "id": "seth31", "name": "Seth Antanah", "phone": "+2330591971286" },
+  {"id": "abdo825", "name": "Bro Adu", "phone": "+2330249658504"},
+  {"id": "aufm705", "name": "Jamfua.", "phone": "+2330245704247"},
+  {"id": "ksgm964", "name": "Moses Kyeremateng ", "phone": "+2330247044696"},
+  { "id": "seth31", "name": "Seth Antanah", "phone": "+2330591971286" }
 ];
 
 //{"id": "", "name": "", "phone": "+233"},
-// {"id": "", "name": "", "phone": "+233"},
-// {"id": "", "name": "", "phone": "+233"},
-
-
-
-
-
-
-
-
-//[
-// { id: "Seth31", name: "Seth Antanah", phone: "+2330591971286" },
-// { id: "rks44", name: "Richard Kwabi Sarpong", phone: "+2330244539744" },
-// { id: "pks85", name: "Perez Kwabi Sarpong", phone: "+2330265315585" },
-// { id: "kwg78", name: "Kwame Gyanfi", phone: "+16479176978" },
-// { id: "dks24", name: "Daniel Kwabi Sarpong", phone: "+2330544331924" },
-// { id: "jks26", name: "Jernice Kwabi Sarpong", phone: "+2330541373626" },
-// { id: "bks10", name: "Bernice Kwabi Sarpong", phone: "+2330203534810" },
-// { id: "kks71", name: "Karen Kwabi Sarpong", phone: "+2330245219271" },
-//];
