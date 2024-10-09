@@ -186,6 +186,8 @@ export const friendsList = [
   {"id": "abdo825", "name": "Bro Adu", "phone": "+2330249658504"},
   {"id": "aufm705", "name": "Jamfua.", "phone": "+2330245704247"},
   {"id": "ksgm964", "name": "Moses Kyeremateng ", "phone": "+2330247044696"},
+  {"id": "kbgn8942", "name": "Bro king", "phone": "+2330245808969"},
+  {"id": "yhlc905", "name": "Evelyn Chicsy", "phone": "+2330246323599"},
   { "id": "seth31", "name": "Seth Antanah", "phone": "+2330591971286" }
 ];
 
