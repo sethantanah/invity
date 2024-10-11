@@ -80,7 +80,7 @@ app.get('/api/record/load-data', (req, res) => {
   });
 });
 
-// Route to display the PDF file
+// //Route to display the PDF file
 // app.get('/wedding-anniversary-celebration-program', (req, res) => {
 //   const pdfPath = path.join(__dirname, 'public', 'assets', 'wedding-annivesary-program-outline.pdf');
 //   res.sendFile(pdfPath);
