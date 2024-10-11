@@ -81,10 +81,16 @@ app.get('/api/record/load-data', (req, res) => {
 });
 
 // Route to display the PDF file
+// app.get('/wedding-anniversary-celebration-program', (req, res) => {
+//   const pdfPath = path.join(__dirname, 'public', 'assets', 'wedding-annivesary-program-outline.pdf');
+//   res.sendFile(pdfPath);
+// });
+
+
 app.get('/wedding-anniversary-celebration-program', (req, res) => {
-  const pdfPath = path.join(__dirname, 'public', 'assets', 'wedding-annivesary-program-outline.pdf');
-  res.sendFile(pdfPath);
+  res.sendFile(path.join(__dirname, 'views', 'program.html'));
 });
+
 
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
