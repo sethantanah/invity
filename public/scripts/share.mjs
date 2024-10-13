@@ -64,6 +64,15 @@ friendsList.forEach((friend, index) => {
    idCell.textContent = friend.tableNumber;
    row.appendChild(idCell);
 
+     // WhatsApp Button
+  const whatsappProgram = `45th Annivesary of John and Vivian. Event Program Outline: https://johnandvivian.com/wedding-anniversary-celebration-program`;
+  const whatsappLink3 = document.createElement("a");
+  whatsappLink3.href = `https://wa.me/${friend.phone.replace(/\D/g, '')}?text=${encodeURIComponent(whatsappProgram)}`; // WhatsApp share link
+  whatsappLink3.target = "_blank";
+  whatsappLink3.className = "bg-green-500 text-white py-1 px-2 rounded hover:bg-green-600";
+  whatsappLink3.textContent = "Program Outline";
+  actionCell.appendChild(whatsappLink3);
+
   // WhatsApp Button
   const whatsappMessage = `45th Annivesary of John and Vivian, we have reserved a seat at table ${friend.tableNumber} for you.`;
   const whatsappLink2 = document.createElement("a");
@@ -72,6 +81,9 @@ friendsList.forEach((friend, index) => {
   whatsappLink2.className = "bg-green-500 text-white py-1 px-2 rounded hover:bg-green-600";
   whatsappLink2.textContent = "Table Number WhatsApp";
   actionCell.appendChild(whatsappLink2);
+
+
+
 
     // View Button
     const viewLink = document.createElement("a");
