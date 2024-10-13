@@ -9,16 +9,17 @@ friendsList.forEach((friend, index) => {
         const row = document.createElement("tr");
 
         // ID Column
-        const indexCell = document.createElement("td");
-        indexCell.className = "py-2 px-4 border-b text-center";
-        indexCell.textContent = (index + 1).toString();
-        row.appendChild(indexCell);
+        // const indexCell = document.createElement("td");
+        // indexCell.className = "py-2 px-4 border-b text-center";
+        // indexCell.textContent = (index + 1).toString();
+        // row.appendChild(indexCell);
 
-    // ID Column
-    const idCell = document.createElement("td");
-    idCell.className = "py-2 px-4 border-b text-center";
-    idCell.textContent = friend.tableNumber;
-    row.appendChild(idCell);
+ 
+            // Phone Column
+    const phoneCell = document.createElement("td");
+    phoneCell.className = "py-2 px-4 border-b text-left";
+    phoneCell.textContent = friend.phone;
+    row.appendChild(phoneCell);
 
     // Name Column
     const nameCell = document.createElement("td");
@@ -26,11 +27,7 @@ friendsList.forEach((friend, index) => {
     nameCell.textContent = friend.name;
     row.appendChild(nameCell);
 
-    // Phone Column
-    const phoneCell = document.createElement("td");
-    phoneCell.className = "py-2 px-4 border-b text-left";
-    phoneCell.textContent = friend.phone;
-    row.appendChild(phoneCell);
+
 
     // Actions Column
     const actionCell = document.createElement("td");
@@ -50,15 +47,22 @@ friendsList.forEach((friend, index) => {
 
 
      // SMS Button
-  const smsMessage = `45th Annivesary of John and Vivian, we have reserved a seat at table ${friend.tableNumber} for you.`;
-  const smsLink = document.createElement("a");
-  smsLink.href = `sms:${friend.phone}?body=${encodeURIComponent(smsMessage)}`; // SMS share link
-  smsLink.className = "bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-600";
-  smsLink.textContent = "Send SMS";
-  actionCell.appendChild(smsLink);
+//   const smsMessage = `45th Annivesary of John and Vivian, we have reserved a seat at table ${friend.tableNumber} for you.`;
+//   const smsLink = document.createElement("a");
+//   smsLink.href = `sms:${friend.phone}?body=${encodeURIComponent(smsMessage)}`; // SMS share link
+//   smsLink.className = "bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-600";
+//   smsLink.textContent = "Send SMS";
+//   actionCell.appendChild(smsLink);
 
-  // Space between buttons
-  actionCell.appendChild(document.createTextNode(" "));
+//   // Space between buttons
+//   actionCell.appendChild(document.createTextNode(" "));
+
+
+   // ID Column
+   const idCell = document.createElement("td");
+   idCell.className = "py-2 px-4 border-b text-center";
+   idCell.textContent = friend.tableNumber;
+   row.appendChild(idCell);
 
   // WhatsApp Button
   const whatsappMessage = `45th Annivesary of John and Vivian, we have reserved a seat at table ${friend.tableNumber} for you.`;
