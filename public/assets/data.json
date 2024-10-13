@@ -1,4 +1,4 @@
-export const friendsList = [
+[
   { "id": "dkwa764", "name": "Daniel Kwarteng", "phone": "+233244615764", "tableNumber": "2" },
   { "id": "ikme945", "name": "I.K. Mensah", "phone": "+233244929045", "tableNumber": "RESERVED TABLE 1" },
   { "id": "fada506", "name": "Frank Adu Dankor", "phone": "+233243068506", "tableNumber": "RESERVED TABLE 1" },
@@ -26,7 +26,6 @@ export const friendsList = [
   { "id": "omti600", "name": "Owusu Mensah", "phone": "+233555261600", "tableNumber": "RESERVED TABLE 1" },
   { "id": "oskw625", "name": "Osei Kwame", "phone": "+233244066625", "tableNumber": "9" },
   { "id": "isbu600", "name": "Isaac Bugyei", "phone": "+233552798600", "tableNumber": "9" },
-  { "id": "kwak000", "name": "Kwaku Akuoko", "phone": "Not provided", "tableNumber": "" },
   { "id": "drya531", "name": "Dr. Yaw Oppong", "phone": "Not provided", "tableNumber": "" },
   { "id": "edar681", "name": "Edwin Arthur", "phone": "+233266317531", "tableNumber": "13" },
   { "id": "evna000", "name": "Ynvon Naabo", "phone": "+233552199681", "tableNumber": "7" },
@@ -39,9 +38,9 @@ export const friendsList = [
   { "id": "opbe192", "name": "Ophilia Boachie & Patience Ampaw", "phone": "+233244963192", "tableNumber": "4" },
   { "id": "asas390", "name": "Asare Asiama", "phone": "+233243464390", "tableNumber": "" },
   { "id": "masa005", "name": "Maxwell Sarpong", "phone": "+233205305005", "tableNumber": "13" },
-  { "id": "boda171", "name": "Dora Dankor", "phone": "+233547666171", "tableNumber": "" },
+  { "id": "boda171", "name": "Dora Dankor", "phone": "+233547666171", "tableNumber": "10" },
   { "id": "ofam170", "name": "Ofori Amanfo", "phone": "+233553710170", "tableNumber": "9" },
-  { "id": "amgo317", "name": "Ampansa Godfrey", "phone": "+233244630817", "tableNumber": "" },
+  { "id": "amgo317", "name": "Ampansah Godfred", "phone": "+233244630817", "tableNumber": "" },
   { "id": "sabo970", "name": "Samuel Boakye", "phone": "+233208125970", "tableNumber": "10" },
   { "id": "alse117", "name": "Alberta & Serwaa Alice", "phone": "+233247112117", "tableNumber": "12" },
   { "id": "frte248", "name": "Francis Amartey", "phone": "+233554024889", "tableNumber": "14" },
@@ -204,6 +203,4 @@ export const friendsList = [
   { "id": "kbgn8942", "name": "Bro king", "phone": "+2330245808969", "tableNumber": "" },
   { "id": "yhlc905", "name": "Evelyn Chicsy", "phone": "+2330246323599", "tableNumber": "" },
   { "id": "seth31", "name": "Seth Antanah", "phone": "+2330591971286", "tableNumber": "18" }
-];
-
-//{"id": "", "name": "", "phone": "+233", "tableNumber": "" },
+]
