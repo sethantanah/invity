@@ -50,7 +50,7 @@ friendsList.forEach((friend, index) => {
 
 
      // SMS Button
-  const smsMessage = `45th Annivesary of John and Vivian, we have reserved a seat at table  ${friend.tableNumber} for you.`;
+  const smsMessage = `45th Annivesary of John and Vivian, we have reserved a seat at table ${friend.tableNumber} for you.`;
   const smsLink = document.createElement("a");
   smsLink.href = `sms:${friend.phone}?body=${encodeURIComponent(smsMessage)}`; // SMS share link
   smsLink.className = "bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-600";
@@ -61,7 +61,7 @@ friendsList.forEach((friend, index) => {
   actionCell.appendChild(document.createTextNode(" "));
 
   // WhatsApp Button
-  const whatsappMessage = `45th Annivesary of John and Vivian, we have reserved a seat at table  ${friend.tableNumber} for you.`;
+  const whatsappMessage = `45th Annivesary of John and Vivian, we have reserved a seat at table ${friend.tableNumber} for you.`;
   const whatsappLink2 = document.createElement("a");
   whatsappLink2.href = `https://wa.me/${friend.phone.replace(/\D/g, '')}?text=${encodeURIComponent(whatsappMessage)}`; // WhatsApp share link
   whatsappLink2.target = "_blank";
