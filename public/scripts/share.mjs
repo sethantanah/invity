@@ -5,7 +5,7 @@ const friendsTable = document.getElementById("friends-table");
 
 // Populate the table with the friends list
 friendsList.forEach((friend, index) => {
-    if(friend.tableNumber !== ""){
+    // if(friend.tableNumber !== ""){
         const row = document.createElement("tr");
 
         // ID Column
@@ -65,37 +65,48 @@ friendsList.forEach((friend, index) => {
    row.appendChild(idCell);
 
      // WhatsApp Button
-  const whatsappProgram = `45th Annivesary of John and Vivian. Event Program Outline: https://johnandvivian.com/wedding-anniversary-celebration-program`;
-  const whatsappLink3 = document.createElement("a");
-  whatsappLink3.href = `https://wa.me/${friend.phone.replace(/\D/g, '')}?text=${encodeURIComponent(whatsappProgram)}`; // WhatsApp share link
-  whatsappLink3.target = "_blank";
-  whatsappLink3.className = "bg-green-500 text-white py-1 px-2 rounded hover:bg-green-600";
-  whatsappLink3.textContent = "Program Outline";
-  actionCell.appendChild(whatsappLink3);
+  // const whatsappProgram = `45th Annivesary of John and Vivian. Event Program Outline: https://johnandvivian.com/wedding-anniversary-celebration-program`;
+  // const whatsappLink3 = document.createElement("a");
+  // whatsappLink3.href = `https://wa.me/${friend.phone.replace(/\D/g, '')}?text=${encodeURIComponent(whatsappProgram)}`; // WhatsApp share link
+  // whatsappLink3.target = "_blank";
+  // whatsappLink3.className = "bg-green-500 text-white py-1 px-2 rounded hover:bg-green-600";
+  // whatsappLink3.textContent = "Program Outline";
+  // actionCell.appendChild(whatsappLink3);
 
   // WhatsApp Button
-  const whatsappMessage = `45th Annivesary of John and Vivian, we have reserved a seat at table ${friend.tableNumber} for you.`;
+  const whatsappMessage = `From the family of the Kwarbi Sarpongs, we would like to thank you all for your unwavering support and prayers to make our day a success. May Jehovah God continue to bless you all. Num. 6:24-26`;
   const whatsappLink2 = document.createElement("a");
   whatsappLink2.href = `https://wa.me/${friend.phone.replace(/\D/g, '')}?text=${encodeURIComponent(whatsappMessage)}`; // WhatsApp share link
   whatsappLink2.target = "_blank";
   whatsappLink2.className = "bg-green-500 text-white py-1 px-2 rounded hover:bg-green-600";
-  whatsappLink2.textContent = "Table Number WhatsApp";
+  whatsappLink2.textContent = "Thank you Message WA";
   actionCell.appendChild(whatsappLink2);
+
+
+  // SMS Button
+  const smsMessage = `From the family of the Kwarbi Sarpongs, we would like to thank you all for your unwavering support and prayers to make our day a success. May Jehovah God continue to bless you all. Num. 6:24-26`;
+  const smsLink = document.createElement("a");
+  smsLink.href = `sms:${friend.phone}?body=${encodeURIComponent(smsMessage)}`; // SMS share link
+  smsLink.className = "bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-600";
+  smsLink.textContent = "Thank you Message SMS";
+  actionCell.appendChild(smsLink);
+
+  // Space between buttons
+  actionCell.appendChild(document.createTextNode(" "));
 
 
 
 
     // View Button
-    const viewLink = document.createElement("a");
-    // viewLink.href = `https://www.23333.com/?id=${friend.id}`; // View URL
-    viewLink.href = `https://johnandvivian.com/?share=${friend.id}`;
-    viewLink.target = "_blank";
-    viewLink.className = "bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-600";
-    viewLink.textContent = "View";
-    actionCell.appendChild(viewLink);
+    // const viewLink = document.createElement("a");
+    // viewLink.href = `https://johnandvivian.com/?share=${friend.id}`;
+    // viewLink.target = "_blank";
+    // viewLink.className = "bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-600";
+    // viewLink.textContent = "View";
+    // actionCell.appendChild(viewLink);
 
     row.appendChild(actionCell);
 
     friendsTable.appendChild(row);
-    }
+    //}
 });
