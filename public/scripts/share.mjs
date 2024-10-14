@@ -74,7 +74,7 @@ friendsList.forEach((friend, index) => {
   // actionCell.appendChild(whatsappLink3);
 
   // WhatsApp Button
-  const whatsappMessage = `From the family of the Kwarbi Sarpongs, we would like to thank you all for your unwavering support and prayers to make our day a success. May Jehovah God continue to bless you all. Num. 6:24-26`;
+  const whatsappMessage = `From the family of the Kwarbi Sarpongs, we would like to thank you all for your unwavering support and prayers to make our day a success. May Jehovah God continually bless you all. Num. 6:24-26`;
   const whatsappLink2 = document.createElement("a");
   whatsappLink2.href = `https://wa.me/${friend.phone.replace(/\D/g, '')}?text=${encodeURIComponent(whatsappMessage)}`; // WhatsApp share link
   whatsappLink2.target = "_blank";
@@ -84,7 +84,7 @@ friendsList.forEach((friend, index) => {
 
 
   // SMS Button
-  const smsMessage = `From the family of the Kwarbi Sarpongs, we would like to thank you all for your unwavering support and prayers to make our day a success. May Jehovah God continue to bless you all. Num. 6:24-26`;
+  const smsMessage = `From the family of the Kwarbi Sarpongs, we would like to thank you all for your unwavering support and prayers to make our day a success. May Jehovah God continually bless you all. Num. 6:24-26`;
   const smsLink = document.createElement("a");
   smsLink.href = `sms:${friend.phone}?body=${encodeURIComponent(smsMessage)}`; // SMS share link
   smsLink.className = "bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-600";
