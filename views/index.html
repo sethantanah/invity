@@ -53,104 +53,168 @@
         class="flex flex-col md:flex-row items-stretch gap-2 md:gap-8 max-w-6xl mx-auto bg-[#FDFBF7] md:rounded-xl shadow-2xl overflow-scroll md:overflow-hidden h-screen"
       >
         <!-- Static Image Section -->
-        <div class="w-full md:w-1/2 h-screen  md:h-full md:sticky top-0 bg-[#FDFBF7]">
-          <div class="md:absolute inset-0 bg-navy/30 mix-blend-overlay"></div>
-          <img
-            src="/assets/wedding.jpeg"
-            alt="Wedding Image"
-            class="w-full h-screen md:h-full object-cover"
-          />
+        <div class="w-full md:w-1/2 h-screen md:h-full md:sticky top-0 bg-[#FDFBF7] relative group">
+            <div class="absolute inset-0 bg-navy/30 mix-blend-overlay"></div>
+            
+            <!-- Image with zoom animation on mobile -->
+            <img
+                src="/assets/wedding.jpeg"
+                alt="Wedding Image"
+                class="w-full h-screen md:h-full object-cover transform transition-transform duration-[3s] ease-in-out sm:group-hover:scale-105 animate-kenburns"
+            />
+            
+            <!-- Animated Heart Icon -->
+            <div class="md:hidden absolute bottom-0 text-white bg-navy">
+                <div class="relative mb-[-60px] m-10 bg-navy">
+                    <div
+                      class="absolute top-0 left-0 w-16 h-16 border-l-2 border-t-2 border-gold"
+                    ></div>
+                    <div
+                      class="absolute top-0 right-0 w-16 h-16 border-r-2 border-t-2 border-gold"
+                    ></div>
+                    <h1
+                      class=" text-2xl md:text-4xl font-['Cinzel'] text-gold tracking-[0.3em] leading-relaxed pt-8 pl-5"
+                    >
+                      Together with their families
+                    </h1>
+                    <div
+                      class="w-48 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mt-4"
+                    ></div>
+                  </div>
+            </div>
         </div>
 
         <!-- Content Section -->
-        <div class="w-full md:w-1/2 md:content-scroll bg-[#FDFBF7]">
-            <div class="p-12 relative">
-                <!-- Ornamental Header -->
-                <div class="relative mb-16">
-                    <div class="absolute top-0 left-0 w-16 h-16 border-l-2 border-t-2 border-gold"></div>
-                    <div class="absolute top-0 right-0 w-16 h-16 border-r-2 border-t-2 border-gold"></div>
-                    <h1 class="text-2xl md:text-4xl font-['Cinzel'] text-gold tracking-[0.3em] leading-relaxed pt-8 pl-5">
-                        Together with their families
-                    </h1>
-                    <div class="w-48 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mt-4"></div>
-                </div>
-        
-                <!-- Names Section -->
-                <div class="my-10 relative">
-                    <div class="absolute -left-4 top-1/2 w-8 h-8 border-2 border-gold/30 rounded-full"></div>
-                    <div class="absolute -right-4 top-1/2 w-8 h-8 border-2 border-gold/30 rounded-full"></div>
-                    <!-- <p class="text-xl font-['Playfair_Display'] text-navy/70 mb-8"></p> -->
-                    <div class="space-y-6">
-                        <h2 class="text-6xl font-['Playfair_Display'] text-navy font-bold leading-tight">
-                            Eric Frimpong
-                        </h2>
-                        <div class="flex items-center justify-center my-4">
-                            <div class="flex-1 h-[1px] bg-gradient-to-r from-transparent to-gold max-w-[100px]"></div>
-                            <span class="text-5xl text-gold mx-8 font-['Cinzel']">&</span>
-                            <div class="flex-1 h-[1px] bg-gradient-to-l from-transparent to-gold max-w-[100px]"></div>
-                        </div>
-                        <h2 class="text-6xl pt-10 font-['Playfair_Display'] text-navy font-bold leading-tight">
-                            Jernice K. Sarpong
-                        </h2>
-                    </div>
-                </div>
+        <div class="w-full md:w-1/2 md:h-[100hv] md:overflow-y-scroll  bg-[#FDFBF7]">
+          <div class="p-12 relative">
+            <!-- Ornamental Header -->
+            <div class="hidden md:block relative mb-16">
+              <div
+                class="absolute top-0 left-0 w-16 h-16 border-l-2 border-t-2 border-gold"
+              ></div>
+              <div
+                class="absolute top-0 right-0 w-16 h-16 border-r-2 border-t-2 border-gold"
+              ></div>
+              <h1
+                class="text-2xl md:text-4xl font-['Cinzel'] text-gold tracking-[0.3em] leading-relaxed pt-8 pl-5"
+              >
+                Together with their families
+              </h1>
+              <div
+                class="w-48 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mt-4"
+              ></div>
+            </div>
 
+            <!-- Names Section -->
+            <div class="my-10 relative">
+              <div
+                class="absolute -left-4 top-1/2 w-8 h-8 border-2 border-gold/30 rounded-full"
+              ></div>
+              <div
+                class="absolute -right-4 top-1/2 w-8 h-8 border-2 border-gold/30 rounded-full"
+              ></div>
+              <!-- <p class="text-xl font-['Playfair_Display'] text-navy/70 mb-8"></p> -->
+              <div class="space-y-6">
+                <h2
+                  class="text-6xl font-['Playfair_Display'] text-navy font-bold leading-tight"
+                >
+                  Eric Frimpong
+                </h2>
+                <div class="flex items-center justify-center my-4">
+                  <div
+                    class="flex-1 h-[1px] bg-gradient-to-r from-transparent to-gold max-w-[100px]"
+                  ></div>
+                  <span class="text-5xl text-gold mx-8 font-['Cinzel']">&</span>
+                  <div
+                    class="flex-1 h-[1px] bg-gradient-to-l from-transparent to-gold max-w-[100px]"
+                  ></div>
+                </div>
+                <h2
+                  class="text-6xl pt-10 font-['Playfair_Display'] text-navy font-bold leading-tight"
+                >
+                  Jernice K. Sarpong
+                </h2>
+              </div>
+            </div>
 
-                <h3 class="text-2xl font-['Cinzel'] text-gold">Request Your Company, To Celebrate Their Wedding</h3>
-        
-                <!-- Date and Time -->
-                <div class="my-20 relative">
-                    <div class="absolute inset-0 bg-[#F5F1EA] rounded-3xl transform -rotate-1"></div>
-                    <div class="relative bg-white/80 backdrop-blur-sm p-10 rounded-2xl border border-gold/10 shadow-xl">
-                        <div class="flex flex-col items-center gap-4">
-                            <p class="text-4xl font-['Playfair_Display'] text-navy font-bold">
-                                Saturday, March 29th
-                            </p>
-                            <p class="text-6xl font-['Playfair_Display'] text-gold font-light">2025</p>
-                            <p class="text-2xl text-navy/70 mt-2">at One O'Clock in the Afternoon</p>
-                        </div>
-                    </div>
+            <h3 class="text-2xl font-['Cinzel'] text-gold">
+              Request Your Company, To Celebrate Their Wedding
+            </h3>
+
+            <!-- Date and Time -->
+            <div class="my-20 relative">
+              <div
+                class="absolute inset-0 bg-[#F5F1EA] rounded-3xl transform -rotate-1"
+              ></div>
+              <div
+                class="relative bg-white/80 backdrop-blur-sm p-10 rounded-2xl border border-gold/10 shadow-xl"
+              >
+                <div class="flex flex-col items-center gap-4">
+                  <p
+                    class="text-4xl font-['Playfair_Display'] text-navy font-bold"
+                  >
+                    Saturday, March 29th
+                  </p>
+                  <p
+                    class="text-6xl font-['Playfair_Display'] text-gold font-light"
+                  >
+                    2025
+                  </p>
+                  <p class="text-2xl text-navy/70 mt-2">
+                    at One O'Clock in the Afternoon
+                  </p>
                 </div>
-        
-                <!-- Venue -->
-                <div class="my-20">
-                    <div class="space-y-6">
-                        <h3 class="text-2xl font-['Cinzel'] text-gold">The Venue</h3>
-                        <p class="text-3xl font-['Playfair_Display'] text-navy">
-                            Kingdom Hall of Jehovah's Witnesses
-                        </p>
-                        <p class="text-xl text-navy/70">Patasi-Kumasi</p>
-                        <div class="w-24 h-[2px] bg-gradient-to-r from-gold/20 via-gold to-gold/20 mx-auto my-8"></div>
-                        <p class="text-xl italic text-gold/90 font-['Playfair_Display']">
-                            Formal Reception Follows On
-                        </p>
-                    </div>
-                </div>
-        
-                <!-- Details -->
-                <div class="flex flex-wrap gap-6 justify-center my-16">
-                    <span class="md:px-8 py-3 text-navy/90  rounded-full text-base tracking-[0.2em]">
-                        STRICTLY BY INVITATION |  ADULTS ONLY EVENT
-                    </span>
-                    <!-- <span class="px-8 py-3 bg-navy/90 text-white rounded-full text-base tracking-[0.2em] shadow-lg">
+              </div>
+            </div>
+
+            <!-- Venue -->
+            <div class="my-20">
+              <div class="space-y-6">
+                <h3 class="text-2xl font-['Cinzel'] text-gold">The Venue</h3>
+                <p class="text-3xl font-['Playfair_Display'] text-navy">
+                  Kingdom Hall of Jehovah's Witnesses
+                </p>
+                <p class="text-xl text-navy/70">Patasi-Kumasi</p>
+                <div
+                  class="w-24 h-[2px] bg-gradient-to-r from-gold/20 via-gold to-gold/20 mx-auto my-8"
+                ></div>
+                <p
+                  class="text-xl italic text-gold/90 font-['Playfair_Display']"
+                >
+                  Formal Reception Follows On
+                </p>
+              </div>
+            </div>
+
+            <!-- Details -->
+            <div class="flex flex-wrap gap-6 justify-center my-16">
+              <span
+                class="md:px-8 py-3 text-navy/90 rounded-full text-base tracking-[0.2em]"
+              >
+                STRICTLY BY INVITATION | ADULTS ONLY EVENT
+              </span>
+              <!-- <span class="px-8 py-3 bg-navy/90 text-white rounded-full text-base tracking-[0.2em] shadow-lg">
                        
                     </span> -->
-                </div>
-        
-                <!-- RSVP Button -->
-                <button id="rsvpButton" 
-                    class="w-full group relative px-12 py-6 bg-gradient-to-r from-gold to-[#D4B475] text-white rounded-xl hover:from-navy hover:to-navy transition-all duration-500 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 tracking-[0.3em] font-['Cinzel'] text-xl">
-                    <span class="relative z-10">RSVP NOW</span>
-                    <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 rounded-xl transition-opacity"></div>
-                </button>
-
-                <div class="mb-10"></div>
-                <div class="mb-10"></div>
-                <div class="mb-10"></div>
-                <div class="mb-10"></div>
             </div>
+
+            <!-- RSVP Button -->
+            <button
+              id="rsvpButton"
+              class="w-full group relative px-12 py-6 bg-gradient-to-r from-gold to-[#D4B475] text-white rounded-xl hover:from-navy hover:to-navy transition-all duration-500 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 tracking-[0.3em] font-['Cinzel'] text-xl"
+            >
+              <span class="relative z-10">RSVP NOW</span>
+              <div
+                class="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 rounded-xl transition-opacity"
+              ></div>
+            </button>
+
+            <div class="mb-10"></div>
+            <div class="mb-10"></div>
+            <div class="mb-10"></div>
+            <div class="mb-10"></div>
+          </div>
         </div>
-        
       </div>
     </div>
 
