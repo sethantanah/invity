@@ -110,3 +110,11 @@ friendsList.forEach((friend, index) => {
     friendsTable.appendChild(row);
     //}
 });
+
+
+
+
+
+
+
+  //Gallary
