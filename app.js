@@ -3,7 +3,7 @@ import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
 import cors from 'cors';
-import { getRecords, addRecord } from './db.mjs';
+import { getRecords, addRecord, fetchGoogleSheetData } from './db.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -35,6 +35,12 @@ app.get('/attendance', (req, res) => {
 });
 
 // Sample API route
+app.get('/api/record/invitees-data', async (req, res) => {
+  const records = await fetchGoogleSheetData();
+  res.json(records);
+});
+
+
 app.post('/api/record/attendance', async (req, res) => {
     const records = await addRecord(req.body);
     res.json({ message: records });
