@@ -5,20 +5,19 @@ const thankYouView = document.getElementById("thankYouView");
 const acceptBtn = document.getElementById("accept");
 const rejectBtn = document.getElementById("reject");
 
+const dinnerInvite = document.getElementById("toDinner");
+
 function getURLParameter(name) {
   const urlParams = new URLSearchParams(window.location.search);
   return urlParams.get(name);
 }
 
-async function respond(response) {
-  window.localStorage.setItem("status", response);
+window.onload = async () => {
   const friendId = getURLParameter("share");
   if (friendId == null) {
     alert("Click on the link sent to you again!");
     return;
   } else {
-    rsvpFormView.classList.add("hidden");
-    loading.classList.remove("hidden");
     const response = await fetch("/api/record/invitees-data", {
       method: "GET",
       headers: {
@@ -29,15 +28,37 @@ async function respond(response) {
     if (response.status === 200) {
       response.json().then((data) => {
         const friend = data.find((friend) => friend.id == friendId);
-        response === "accept"
-          ? submit("Attending", true, friend.name)
-          : submit("Not Attending", false, friend.name);
-
-        setTimeout(() => {
-          thankYouView.classList.remove("hidden");
-          loading.classList.add("hidden");
-        }, 10000);
+        localStorage.setItem("invitee", JSON.stringify(friend));
+        if (friend.todinner.trim() === "TRUE") {
+          dinnerInvite.classList.remove("hidden");
+        }
       });
+    }
+  }
+};
+
+async function respond(response) {
+  window.localStorage.setItem("status", response);
+  const friendId = getURLParameter("share");
+  if (friendId == null) {
+    alert("Click on the link sent to you again!");
+    return;
+  } else {
+    rsvpFormView.classList.add("hidden");
+    loading.classList.remove("hidden");
+    let friend = localStorage.getItem("invitee");
+    if (friend) {
+      friend = JSON.parse(friend);
+      response === "accept"
+        ? submit("Attending", true, friend.name)
+        : submit("Not Attending", false, friend.name);
+
+      setTimeout(() => {
+        thankYouView.classList.remove("hidden");
+        loading.classList.add("hidden");
+      }, 10000);
+    }else{
+      alert("Please reload the page!")
     }
   }
 }

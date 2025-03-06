@@ -57,8 +57,8 @@ export async function getRecords(options = {}) {
 function parseData(input) {
   const lines = input.split("\n").slice(1); // Remove header
   return lines.map((line) => {
-    const [id, name, phone] = line.split(",");
-    return { id, name, phone };
+    const [id, name, phone, todinner] = line.split(",");
+    return { id, name, phone, todinner };
   });
 }
 
