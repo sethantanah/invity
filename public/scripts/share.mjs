@@ -15,11 +15,12 @@ if (response.status === 200) {
 
     // Populate the table with the friends list
     data.forEach((friend, index) => {
+      const phoneNumber = friend.phone[0] === '+' ?  friend.phone : `+${friend.phone}`;
       const row = document.createElement("tr");
       // Phone Column
       const phoneCell = document.createElement("td");
       phoneCell.className = "py-2 px-4 border-b text-left";
-      phoneCell.textContent = friend.phone;
+      phoneCell.textContent =  phoneNumber;
       row.appendChild(phoneCell);
 
       // Name Column
@@ -36,7 +37,7 @@ if (response.status === 200) {
       // // WhatsApp Button
       const message = `John and Vivian's 45th Anniversary Invitation.\nlink: ${baseURL}/?share=${friend.id}`;
       const whatsappLink = document.createElement("a");
-      whatsappLink.href = `https://wa.me/${friend.phone.replace(
+      whatsappLink.href = `https://wa.me/${phoneNumber.replace(
         /\D/g,
         ""
       )}?text=${encodeURIComponent(message)}`; // WhatsApp share link
@@ -52,7 +53,7 @@ if (response.status === 200) {
       // SMS Button
       const smsMessage = `45th Annivesary of John and Vivian, we have reserved a seat at table ${friend.tableNumber} for you.`;
       const smsLink = document.createElement("a");
-      smsLink.href = `sms:${friend.phone}?body=${encodeURIComponent(
+      smsLink.href = `sms:${phoneNumber}?body=${encodeURIComponent(
         smsMessage
       )}`; // SMS share link
       smsLink.className =
