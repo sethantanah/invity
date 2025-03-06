@@ -66,6 +66,20 @@
       .carousel-container:hover .carousel-nav {
         opacity: 1;
       }
+
+      @keyframes custom-bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+
+      .animate-bounce {
+        animation: custom-bounce 1s infinite;
+      }
     </style>
     <script>
       tailwind.config = {
@@ -85,9 +99,11 @@
       <div
         class="flex flex-col md:flex-row items-stretch gap-2 md:gap-8 max-w-6xl mx-auto bg-[#FDFBF7] md:rounded-xl shadow-2xl overflow-scroll md:overflow-hidden h-screen"
       >
-        <div class="md:hidden flex flex-row justify-center items-center p-5 pb-0">
+        <div
+          class="md:hidden flex flex-row justify-center items-center p-5 pb-0"
+        >
           <p
-            class="text-4xl  great-vibes-regular text-navy font-bold leading-tight"
+            class="text-4xl great-vibes-regular text-navy font-bold leading-tight"
           >
             Eric
           </p>
@@ -227,26 +243,18 @@
             </div>
 
             <!-- Venue -->
-            <div class="my-20">
+            <div class="my-0">
               <div class="space-y-6">
                 <h3 class="text-2xl font-['Cinzel'] text-gold">The Venue</h3>
                 <p class="text-3xl font-['Playfair_Display'] text-navy">
                   Kingdom Hall of Jehovah's Witnesses
                 </p>
                 <p class="text-xl text-navy/70">Patasi-Kumasi</p>
-                <div
-                  class="w-24 h-[2px] bg-gradient-to-r from-gold/20 via-gold to-gold/20 mx-auto my-8"
-                ></div>
-                <p
-                  class="text-xl italic text-gold/90 font-['Playfair_Display']"
-                >
-                  Formal Reception Follows On
-                </p>
               </div>
             </div>
 
             <!-- Details -->
-            <div class="flex flex-wrap gap-6 justify-center my-16">
+            <div class="flex flex-wrap gap-6 justify-center">
               <span
                 class="md:px-8 py-3 text-navy/90 rounded-full text-base tracking-[0.2em]"
               >
@@ -254,9 +262,12 @@
               </span>
             </div>
 
-            <div class="my-10 relative hidden" id="toDinner">
+            <!-- Divider -->
+            <div class="w-24 h-0.5 bg-[#C6A963] mx-auto my-10"></div>
+
+            <div class="relative hidden" id="toDinner">
               <!-- Decorative corner flourishes -->
-              <div
+              <!-- <div
                 class="absolute top-0 left-0 w-16 h-16 border-l-2 border-t-2 border-gold/30 rounded-tl-lg"
               ></div>
               <div
@@ -267,10 +278,10 @@
               ></div>
               <div
                 class="absolute bottom-0 right-0 w-16 h-16 border-r-2 border-b-2 border-gold/30 rounded-br-lg"
-              ></div>
+              ></div>-->
 
               <!-- Decorative floral icons -->
-              <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+              <!-- <div class="absolute -top-4 left-1/2 -translate-x-1/2">
                 <svg
                   class="w-8 h-8 text-gold/40"
                   viewBox="0 0 24 24"
@@ -280,9 +291,9 @@
                     d="M12 22c6.627 0 12-5.373 12-12S18.627-2 12-2 0 3.373 0 10s5.373 12 12 12zm0-3c-4.97 0-9-4.03-9-9s4.03-9 9-9 9 4.03 9 9-4.03 9-9 9z"
                   />
                 </svg>
-              </div>
+              </div>  -->
 
-              <div class="relative px-12 py-8">
+              <div class="relative">
                 <div class="flex flex-col items-center gap-4">
                   <h3 class="text-2xl font-['Cinzel'] text-gold">
                     You are also invited to our dinner
@@ -290,16 +301,19 @@
                   <p class="text-3xl font-['Playfair_Display'] text-navy">
                     @ Long Ford Event Center
                   </p>
-                   <a href="https://maps.app.goo.gl/ZuYhZtSa4zkns7FYA" target="_blank">
-                  <p class="text-xl text-navy/70">Kumasi, Near Christian Service university</p>
-                  <p class="text-xl text-navy/70">(click to see location)</p>
+                  <a
+                    href="https://maps.app.goo.gl/ZuYhZtSa4zkns7FYA"
+                    target="_blank"
+                  >
+                    <p class="text-xl text-navy/70">
+                      Kumasi, Near Christian Service university
+                    </p>
+                    <p class="text-xl text-navy/70">(click to see location)</p>
                   </a>
-              
+
                   <p class="text-2xl text-center text-navy/70 mt-2">
                     at Six O'Clock in the Evening
                   </p>
-
-                
 
                   <!-- Enhanced decorative divider -->
                   <!-- <div class="flex items-center gap-4 my-8">
@@ -326,7 +340,7 @@
             <!-- RSVP Button -->
             <button
               id="rsvpButton"
-              class="w-full group relative px-12 py-6 bg-gradient-to-r from-gold to-[#D4B475] text-white rounded-xl hover:from-navy hover:to-navy transition-all duration-500 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 tracking-[0.3em] font-['Cinzel'] text-xl"
+              class="w-full group relative px-12 py-6 my-10 mb-0 bg-gradient-to-r from-gold to-[#D4B475] text-white rounded-xl hover:from-navy hover:to-navy transition-all duration-500 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 tracking-[0.3em] font-['Cinzel'] text-xl animate-bounce"
             >
               <span class="relative z-10">RSVP NOW</span>
               <div
@@ -536,7 +550,9 @@
                         d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                       />
                     </svg>
-                    <span onclick="window.location.href='tel:+2330551234567'">+233 55 123 4567</span>
+                    <span onclick="window.location.href='tel:+2330551234567'"
+                      >+233 55 123 4567</span
+                    >
                   </div>
                 </div>
 
@@ -562,7 +578,9 @@
                         d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                       />
                     </svg>
-                    <span onclick="window.location.href='tel:+233249876543'">+233 24 987 6543</span>
+                    <span onclick="window.location.href='tel:+233249876543'"
+                      >+233 24 987 6543</span
+                    >
                   </div>
                 </div>
               </div>
@@ -624,26 +642,26 @@
         </div>
 
         <div class="flex justify-center items-center hidden m-6" id="loading">
-        <div role="status" >
-          <svg
-            aria-hidden="true"
-            class="inline w-12 h-12 text-gray-200 animate-spin dark:text-gray-600 fill-[#C6A963]"
-            viewBox="0 0 100 101"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
-              fill="currentColor"
-            />
-            <path
-              d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
-              fill="currentFill"
-            />
-          </svg>
-          <span class="sr-only">Loading...</span>
+          <div role="status">
+            <svg
+              aria-hidden="true"
+              class="inline w-12 h-12 text-gray-200 animate-spin dark:text-gray-600 fill-[#C6A963]"
+              viewBox="0 0 100 101"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                fill="currentColor"
+              />
+              <path
+                d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                fill="currentFill"
+              />
+            </svg>
+            <span class="sr-only">Loading...</span>
+          </div>
         </div>
-      </div>
 
         <!-- Thank You View -->
         <div id="thankYouView" class="hidden text-center py-8">
