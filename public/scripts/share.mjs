@@ -35,7 +35,7 @@ if (response.status === 200) {
         "py-2 px-4 border-b text-center flex flex-row gap-2";
 
       // // WhatsApp Button
-      const message = `Invitation to Wedding Celebration of Eric Jernice.\nlink: ${baseURL}/?share=${friend.id}`;
+      const message = `Invitation to the Wedding Celebration of Eric & Jernice..\nlink: ${baseURL}/?share=${friend.id}`;
       const whatsappLink = document.createElement("a");
       whatsappLink.href = `https://wa.me/${phoneNumber.replace(
         /\D/g,
