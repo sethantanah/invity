@@ -35,7 +35,7 @@ if (response.status === 200) {
         "py-2 px-4 border-b text-center flex flex-row gap-2";
 
       // // WhatsApp Button
-      const message = `John and Vivian's 45th Anniversary Invitation.\nlink: ${baseURL}/?share=${friend.id}`;
+      const message = `Invitation to Wedding Celebration of Eric Jernice.\nlink: ${baseURL}/?share=${friend.id}`;
       const whatsappLink = document.createElement("a");
       whatsappLink.href = `https://wa.me/${phoneNumber.replace(
         /\D/g,
@@ -59,7 +59,7 @@ if (response.status === 200) {
       smsLink.className =
         "bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-600";
       smsLink.textContent = "Send SMS";
-      actionCell.appendChild(smsLink);
+      // actionCell.appendChild(smsLink);
 
       // Space between buttons
       actionCell.appendChild(document.createTextNode(" "));
