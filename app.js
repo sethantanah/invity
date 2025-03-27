@@ -34,7 +34,7 @@ app.get('/attendance', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'attendance.html'));
 });
 
-app.get('/programme', (req, res) => {
+app.get('eric&jernice/programme', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'order_of_events.html'));
 });
 
