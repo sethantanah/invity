@@ -34,6 +34,10 @@ app.get('/attendance', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'attendance.html'));
 });
 
+app.get('/programme', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'order_of_events.html'));
+});
+
 // Sample API route
 app.get('/api/record/invitees-data', async (req, res) => {
   const records = await fetchGoogleSheetData();
