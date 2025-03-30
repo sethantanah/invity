@@ -23,8 +23,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Serve your HTML file
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'index.html'));
+    res.sendFile(path.join(__dirname, 'views', 'order_of_events.html'));
 });
+
+// app.get('/', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'views', 'index.html'));
+// });
+
 
 app.get('/share', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'share.html'));
@@ -41,6 +46,13 @@ app.get('/eric&jernice/programme', (req, res) => {
 app.get('/programme', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'order_of_events.html'));
 });
+
+app.get('/order-of-events', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'programme.html'));
+});
+
+
+
 // Sample API route
 app.get('/api/record/invitees-data', async (req, res) => {
   const records = await fetchGoogleSheetData();
