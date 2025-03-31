@@ -35,7 +35,7 @@ if (response.status === 200) {
         "py-2 px-4 border-b text-center flex flex-row gap-2";
 
       // // WhatsApp Button
-      const message = `Invitation to the Wedding Ceremony of Eric & Jernice.\nlink: ${baseURL}/?share=${friend.id}`;
+      const message = `From the Frimpong family, we would like to thank you all for your unwavering support and prayers to make our day a success. May Jehovah God continually bless you all. Num. 6:24-26`;
       const whatsappLink = document.createElement("a");
       whatsappLink.href = `https://wa.me/${phoneNumber.replace(
         /\D/g,
@@ -51,7 +51,7 @@ if (response.status === 200) {
       actionCell.appendChild(document.createTextNode(" "));
 
       // SMS Button
-      const smsMessage = `45th Annivesary of John and Vivian, we have reserved a seat at table ${friend.tableNumber} for you.`;
+      const smsMessage = `From the Frimpong family, we would like to thank you all for your unwavering support and prayers to make our day a success. May Jehovah God continually bless you all. Num. 6:24-26`;
       const smsLink = document.createElement("a");
       smsLink.href = `sms:${phoneNumber}?body=${encodeURIComponent(
         smsMessage
